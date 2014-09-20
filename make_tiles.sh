@@ -3,7 +3,7 @@
 set -o nounset
 
 FULL_MAP="$1"
-RENAME_SCRIPT="$PWD/rename_linear_to_xy.py"
+RENAME_SCRIPT="$PWD/rename_tiles.py"
 TMPDIR="/tmp/tiles/"
 WEBDIR="/var/www/maps.ayntest.net/tiles/"
 
