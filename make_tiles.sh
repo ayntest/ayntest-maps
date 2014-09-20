@@ -1,7 +1,7 @@
 #!/bin/bash
 
 FULL_MAP="$1"
-RENAME_SCRIPT="$HOME/rename_linear_to_xy.py"
+RENAME_SCRIPT="$PWD/rename_linear_to_xy.py"
 TMPDIR="/tmp/tiles/"
 WEBDIR="/var/www/maps.ayntest.net/tiles/"
 
