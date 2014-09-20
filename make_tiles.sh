@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -o nounset
+
 FULL_MAP="$1"
 RENAME_SCRIPT="$PWD/rename_linear_to_xy.py"
 TMPDIR="/tmp/tiles/"
