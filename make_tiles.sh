@@ -7,7 +7,7 @@ RENAME_SCRIPT="$PWD/rename_tiles.py"
 TMPDIR="/tmp/tiles/"
 WEBDIR="/var/www/maps.ayntest.net/tiles/"
 
-TILE_SIZE=344
+TILE_SIZE=200
 
 BACKUPFILE="map-$(date +%s).png"
 
@@ -31,9 +31,9 @@ convert -verbose -scale 25% "$FULL_MAP" $TMPDIR/map22.png
 convert -verbose -crop "${TILE_SIZE}x$TILE_SIZE" +repage $TMPDIR/map22.png  $TMPDIR/22/tiles_%d.png
 
 echo 'renaming tiles'
-$RENAME_SCRIPT 8256 $TILE_SIZE $TMPDIR/24
-$RENAME_SCRIPT 4128 $TILE_SIZE $TMPDIR/23
-$RENAME_SCRIPT 2064 $TILE_SIZE $TMPDIR/22
+$RENAME_SCRIPT 9600 $TILE_SIZE $TMPDIR/24
+$RENAME_SCRIPT 4800 $TILE_SIZE $TMPDIR/23
+$RENAME_SCRIPT 2400 $TILE_SIZE $TMPDIR/22
 
 echo 'copying to webdir'
 rsync -avh --progress $TMPDIR/ $WEBDIR
